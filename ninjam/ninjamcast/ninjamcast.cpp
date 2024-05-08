@@ -408,7 +408,7 @@ int main(int argc, char **argv)
       }
     } else if (g_client->GetStatus() < 0) {	// krud, conne
       if (!waiting_to_reconnect) {
-  printf("NJ connection fuct\n");
+  printf("Connection to Ninjam server failed to initialize.\n");
         g_client->Disconnect();
         waiting_to_reconnect = 1;
         waiting_to_reconnect_since = now;
