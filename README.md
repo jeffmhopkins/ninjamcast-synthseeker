@@ -20,6 +20,7 @@ njclient.cpp file.
 
 You'll need the following libs and packages installed for it to compile correctly:
 
+```
 gcc-4.3-multilib
 lib32ncurses5 
 lib32ncurses5-dev
@@ -30,7 +31,7 @@ libvorbis0a
 libvorbisenc2
 lib ogg 
 lib mp3lame
-
+```
 
 I may have forgot some packages, check the errors and fix it.
 
