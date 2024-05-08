@@ -1,3 +1,8 @@
+Forked for SynthSeeker Community
+
+
+
+
 NINJAMCast
 Includes WDL Framework, ready to compile on Ubuntu 14.04
 
