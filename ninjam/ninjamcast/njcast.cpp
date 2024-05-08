@@ -104,7 +104,7 @@ int NJCast::Run() {
       case JNL_Connection::STATE_ERROR:
       case JNL_Connection::STATE_CLOSED:
         if (state != RECONNECT) {
-          printf("connection fuct\n");
+          printf("Failed to connect to Shoutcast server.\n");
 
           // reset
           delete conn; conn = NULL;
