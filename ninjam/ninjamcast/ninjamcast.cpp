@@ -77,7 +77,8 @@ void doSamples() {
   // where we should be, in samples
   INT64 sample_pos = ((INT64)(getTimeInMs()-start_time) * g_srate) / (INT64)1000;
 
-  int block_size=1024; // chunks of 1024 samples at a time
+//  int block_size=1024; // chunks of 1024 samples at a time
+  int block_size=16384; //Found to reduce the pops and cliks on synthseeker server
 //  int block_size=4096; // chunks of 1024 samples at a time
 
 
