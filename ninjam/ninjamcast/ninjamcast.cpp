@@ -236,7 +236,7 @@ static int ConfigOnToken(LineParser *lp)
     if (lp->getnumtokens() != 2) return -1;
       int p=lp->gettoken_int(1);
     if (p <= 0) return -2;
-    g_bitrate = p;
+    g_nj_blocksize = p;
   } else
   if (!stricmp(t,"NJ_Session_Dir")) {
     if (lp->getnumtokens() != 2) return -1;
