@@ -24,14 +24,4 @@ libvorbisenc2
 lib ogg 
 lib mp3lame
 ```
-
-I may have forgot some packages, check the errors and fix it.
-
-
-To compile ninjamcast go to ninjam/ninjamcast and then type make.
-Ignore the warnings.
-Then do read the example cfg and set it up.
-
-Have fun.
-
-DaMNeD
+Maybe a few more... compiles and runs on Ubuntu as of 5/20/2024
