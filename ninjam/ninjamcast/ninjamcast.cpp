@@ -38,7 +38,7 @@ char g_sc_genre[4096]="ninjam";
 int g_sc_public=1;
 char g_sc_url[4096]="http://ninjam.com/";
 int g_sc_reconnect_interval=15;
-
+int g_nj_blocksize=1024;
 char g_nj_address[4096]="";	//
 char g_nj_user[4096]="njcast";	//
 char g_nj_pass[4096]="";	//
@@ -77,9 +77,8 @@ void doSamples() {
   // where we should be, in samples
   INT64 sample_pos = ((INT64)(getTimeInMs()-start_time) * g_srate) / (INT64)1000;
 
-//  int block_size=1024; // chunks of 1024 samples at a time
-  int block_size=16384; //Found to reduce the pops and cliks on synthseeker server
-//  int block_size=4096; // chunks of 1024 samples at a time
+  //  int block_size=1024; // chunks of 1024 samples at a time
+  int block_size=g_nj_blocksize; //16384 seems to work for synthseeker server
 
 
   WDL_HeapBuf tmp1;
@@ -155,7 +154,6 @@ static int ConfigOnToken(LineParser *lp)
     if (!(p == 1 || p == 2)) return -2;
     g_numchannels = p;
   } else
-
   if (!stricmp(t,"SC_Server_Name")) {
     if (lp->getnumtokens() != 2) return -1;
     char *p=lp->gettoken_str(1);
@@ -233,6 +231,12 @@ static int ConfigOnToken(LineParser *lp)
     char *p=lp->gettoken_str(1);
     if (!p || !*p) return -2;
     strncpy(g_nj_pass, p, sizeof(g_nj_pass)-1);
+  } else
+  if (!stricmp(t,"NJ_Blocksize")) {
+    if (lp->getnumtokens() != 2) return -1;
+      int p=lp->gettoken_int(1);
+    if (p <= 0) return -2;
+    g_bitrate = p;
   } else
   if (!stricmp(t,"NJ_Session_Dir")) {
     if (lp->getnumtokens() != 2) return -1;
