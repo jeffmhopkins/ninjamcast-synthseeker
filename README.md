@@ -3,21 +3,13 @@ Forked for SynthSeeker Community
 
 
 
-NINJAMCast
-Includes WDL Framework, ready to compile on Ubuntu 14.04
+NINJAMCast - Synthseeker Fork
+ * Forked, added a config file point for block size to combat crackles and pops without having to recompile ninjamcast every time.
 
-24/07/2011
 
-Hello,
-this works and compiles on Ubuntu Ubuntu 10.04.3 LTS 64bits
-Didn't test on other systems.
+ ---------------------------------------
 
-All kudos to Cockos, and particularly Justin, Brennan and All ppl who
-contributed to do this.
-
-I just did a workable makefile, and modified some variables in the
-njclient.cpp file.
-
+ 
 You'll need the following libs and packages installed for it to compile correctly:
 
 ```
